@@ -1,0 +1,66 @@
+{
+    "phx": {
+        "datepicker": {
+            "footer": {
+                "selectToday": "showcase assets Select Today"
+            },
+            "weekdaysShort": {
+                "sunday": "Sun",
+                "monday": "Mon",
+                "tuesday": "Tue",
+                "wednesday": "Wed",
+                "thursday": "Thu",
+                "friday": "Fri",
+                "saturday": "Sat"
+            },
+            "weekdays": {
+                "sunday": "Sunday",
+                "monday": "Monday",
+                "tuesday": "Tuesday",
+                "wednesday": "Wednesday",
+                "thursday": "Thursday",
+                "friday": "Friday",
+                "saturday": "Saturday"
+            },
+            "monthsShort": {
+                "january": "Jan",
+                "february": "Feb",
+                "march": "Mar",
+                "april": "Apr",
+                "may": "May",
+                "june": "Jun",
+                "july": "Jul",
+                "august": "Aug",
+                "september": "Sep",
+                "october": "Oct",
+                "november": "Nov",
+                "december": "Dec"
+            },
+            "months": {
+                "january": "January",
+                "february": "February",
+                "march": "March",
+                "april": "April",
+                "may": "May",
+                "june": "June",
+                "july": "July",
+                "august": "August",
+                "september": "September",
+                "october": "October",
+                "november": "November",
+                "december": "December"
+            }
+        },
+        "input": {
+            "passwordToggle": {
+                "showPasswordText": "(From bundle) Show password",
+                "hidePasswordText": "(From bundle) Hide password"
+            }
+        },
+        "demo": {
+            "appTitle": "sherlock",
+            "appHome": "Home",
+            "appDesc": "Phoenix framework based web application"
+        }
+    }
+}

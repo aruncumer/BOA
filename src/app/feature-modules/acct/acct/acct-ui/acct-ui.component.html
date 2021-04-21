@@ -1,0 +1,69 @@
+<div class="contain">
+     <div class="wrapper">
+          <div class="form">
+               <form action="">
+                    <div class="full-width">
+                         <label for="">Enter AIT</label>
+                         <select>
+                              <option value="">Select</option>
+                              <option value="Car">Car</option>
+                              <option value="Bike">Bike</option>
+                              <option value="Bus">Bus</option>
+                         </select>
+                         <textarea class='displayselected setmargin'></textarea>
+                    </div>
+
+                    <div class="full-width">
+                         <label for="">Enter Cls</label>
+                         <select>
+                              <option value="">Select</option>
+                              <option value="Car">Car</option>
+                              <option value="Bike">Bike</option>
+                              <option value="Bus">Bus</option>
+                         </select>
+                         <textarea class='displayselected setmargin'></textarea>
+                    </div>
+
+
+                    <div class="full-width">
+                         <label for="">Notes</label>
+                         <textarea class='notes' rows="10"></textarea>
+                    </div>
+
+                    <div class="full-width">
+                         <label for="">Enter Categories</label>
+                         <select>
+                              <option value="">Select</option>
+                              <option value="Car">Car</option>
+                              <option value="Bike">Bike</option>
+                              <option value="Bus">Bus</option>
+                         </select>
+                    </div>
+                    <!-- <div class="full-width">
+                         <button>Send</button>
+                    </div> -->
+               </form>
+          </div>
+
+          <div class="contacts">
+               <label for="">Enter Look Back Date / Range</label>
+               <select>
+                    <option value="">Select</option>
+                    <option value="Car">Car</option>
+                    <option value="Bike">Bike</option>
+                    <option value="Bus">Bus</option>
+               </select>
+               <br><br>
+               <mat-calendar (selectedChange)="onSelectDate($event)"></mat-calendar>
+               <input type="text" style="margin-top: 2px;" [value]="selectedDate">
+          </div>
+     </div>
+     <div class="actions">
+          <span>
+               <button>Search</button>
+          </span>
+          <span>
+               <button>Reset</button>
+          </span>
+     </div>
+</div>

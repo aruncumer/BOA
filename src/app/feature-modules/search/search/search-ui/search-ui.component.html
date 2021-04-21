@@ -1,0 +1,41 @@
+<div class="px-row px-ml-0 px-r-0">
+	<div class="px-col-md-2">
+
+	</div>
+	<div class="px-col-md-8">
+
+		<div class="px-container px-tm-outline">
+			<div class="px-row">
+				<div class="px-col-md-6">
+					<div>
+						<app-auto-chip [title]="firstTitle" [itemArray]="appData.aits"
+							(itemList)="getAitList($event)">
+						</app-auto-chip>
+					</div>
+					<div>
+						<app-auto-chip [title]="secondTitle" (itemArray)="appData.ci"
+							(itemList)="getCilist($event)">/aap-auto-chip>
+					</div>
+					<div>
+						<div class="px-input-group px-floating-label">
+							<label for="floatingUser">Notes</label>
+							<textarea phxInput phxClearButton phxFloatingLabel id="floatingUser"
+								cols="63"></textarea>
+						</div>
+					</div>
+				</div>
+				<div class="px-col-md-6">
+					<div>
+
+					</div>
+					<div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="px-col-md-2">
+
+	</div>
+</div>

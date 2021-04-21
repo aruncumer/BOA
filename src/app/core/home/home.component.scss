@@ -1,0 +1,24 @@
+.hero-img-container {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  margin-bottom: 200px;
+}
+
+.app-title {
+  width: 70%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+
+  p {
+    color: gray;
+  }
+}

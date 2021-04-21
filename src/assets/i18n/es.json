@@ -1,0 +1,61 @@
+{
+    "phx": {
+        "datepicker": {
+            "footer": {
+                "selectToday": "ES - showcase assets - Select Today"
+            },
+            "weekdaysShort": {
+                "sunday": "ES -Sun",
+                "monday": "ES -Mon",
+                "tuesday": "ES -Tue",
+                "wednesday": "ES -Wed",
+                "thursday": "ES -Thu",
+                "friday": "ES -Fri",
+                "saturday": "ES -Sat"
+            },
+            "weekdays": {
+                "sunday": "ES -Sunday",
+                "monday": "ES -Monday",
+                "tuesday": "ES -Tuesday",
+                "wednesday": "ES -Wednesday",
+                "thursday": "ES -Thursday",
+                "friday": "ES -Friday",
+                "saturday": "ES -Saturday"
+            },
+            "monthsShort": {
+                "january": "ES -Jan",
+                "february": "ES -Feb",
+                "march": "ES -Mar",
+                "april": "ES -Apr",
+                "may": "ES -May",
+                "june": "ES -Jun",
+                "july": "ES -Jul",
+                "august": "ES -Aug",
+                "september": "ES -Sep",
+                "october": "ES -Oct",
+                "november": "ES -Nov",
+                "december": "ES -Dec"
+            },
+            "months": {
+                "january": "ES -January",
+                "february": "ES -February",
+                "march": "ES -March",
+                "april": "ES -April",
+                "may": "ES -May",
+                "june": "ES -June",
+                "july": "ES -July",
+                "august": "ES -August",
+                "september": "ES -September",
+                "october": "ES -October",
+                "november": "ES -November",
+                "december": "ES -December"
+            }
+        },
+        "input": {
+            "passwordToggle": {
+                "showPasswordText": "ES - Show password",
+                "hidePasswordText": "ES - Hide password"
+            }
+        }
+    }
+}
