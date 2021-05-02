@@ -12,7 +12,7 @@
      }
 }
 
-input,
+// input,
 textarea,
 button {
      width: 100%;
@@ -55,7 +55,7 @@ form p {
 }
 
 button,
-input,
+// input,
 textarea {
      padding: 1em;
 }
@@ -64,12 +64,6 @@ button {
      background: lightgrey;
      width: 100%;
      border: 0;
-}
-
-button:hover,
-button:focus {
-     background: gold;
-     outline: 0;
 }
 
 mat-form-field {
@@ -121,4 +115,77 @@ select {
      .actions > * {
           padding: 2em 2em;
      }
+}
+
+:host ::ng-deep {
+     .mat-form-field-outline-start,
+     .mat-form-field-outline-end {
+          border-radius: 0 !important;
+          border: 1px solid black;
+     }
+
+     .mat-form-field-appearance-outline .mat-form-field-outline {
+          color: black !important;
+     }
+
+     .mat-form-field-appearance-outline .mat-form-field-wrapper {
+          margin: 0.01em 0 !important;
+     }
+
+     .mat-form-field-wrapper {
+          padding-bottom: 0em !important;
+     }
+
+     .mat-chip-list-wrapper {
+          margin: 0px !important;
+     }
+
+     .mat-standard-chip {
+          border-radius: 3px !important;
+     }
+}
+
+/* 
+****************************************************
+     CALENDAR STYLES BELOW
+     @ weekedns color 
+     @ body color
+****************************************************
+*/
+
+::ng-deep .mat-calendar-body > tr > td:nth-child(1) > .mat-calendar-body-cell-content,
+::ng-deep .mat-calendar-body > tr > td:nth-child(7) > .mat-calendar-body-cell-content {
+     color: black;
+}
+
+@for $i from 2 through 6 {
+     ::ng-deep .mat-calendar-body > tr > td:nth-child(#{$i}) > .mat-calendar-body-cell-content {
+          color: blue;
+     }
+}
+
+::ng-deep .mat-calendar-body > tr > td:nth-child(1),
+::ng-deep .mat-calendar-body > tr > td:nth-child(7) {
+     background: lightgrey;
+}
+
+::ng-deep .mat-calendar-body-label {
+     background-color: transparent !important;
+}
+
+::ng-deep .mat-datepicker-content .mat-calendar {
+     width: 333px !important;
+     height: 369px !important;
+}
+
+.date-form-field {
+     margin-top: 1em;
+}
+
+div.textarea {
+     height: 65px;
+     width: 100%;
+     overflow-y: scroll;
+     border: 1px solid #000;
+     margin-top: 4px;
 }

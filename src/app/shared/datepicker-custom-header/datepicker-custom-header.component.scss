@@ -1,0 +1,35 @@
+.example-header {
+     display: flex;
+     align-items: center;
+     padding: 0.5em;
+}
+
+.example-header-label {
+     flex: 1;
+     font-weight: 500;
+     text-align: center;
+}
+.period {
+     width: 74px;
+     background-color: #fff;
+     border: 1px solid blue;
+     color: blue;
+}
+.example-double-arrow .mat-icon {
+     margin: -22%;
+}
+
+mat-icon {
+     font-size: 24px;
+     height: 24px;
+     width: 24px;
+}
+
+::ng-deep .mat-calendar-table-header {
+     color: black;
+     font-size: 20px !important;
+}
+
+::ng-deep .mat-calendar-table-header th {
+     font-weight: 500;
+}

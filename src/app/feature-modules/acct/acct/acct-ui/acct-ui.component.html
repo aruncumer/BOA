@@ -1,69 +1,103 @@
 <div class="contain">
-     <div class="wrapper">
-          <div class="form">
-               <form action="">
+     <form [formGroup]="searchFormGroup" (ngSubmit)="onSubmit()">
+          <div class="wrapper">
+               <div class="form">
                     <div class="full-width">
                          <label for="">Enter AIT</label>
-                         <select>
-                              <option value="">Select</option>
-                              <option value="Car">Car</option>
-                              <option value="Bike">Bike</option>
-                              <option value="Bus">Bus</option>
-                         </select>
-                         <textarea class='displayselected setmargin'></textarea>
+                         <mat-form-field appearance="outline">
+                              <mat-select placeholder="Select" (selectionChange)="onChange('Ait', $event)">
+                                   <mat-option value="">Select</mat-option>
+                                   <mat-option *ngFor='let da of Aitdata' [value]='da.id'
+                                        (click)="getInnerText('Ait', da)">
+                                        {{da.name}}
+                                   </mat-option>
+                              </mat-select>
+                         </mat-form-field>
+                         <div class="textarea">
+                              <mat-chip-list #chipList aria-label="Fruit selection" formControlName="Ait">
+                                   <mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+                                        [removable]="removable" (removed)="remove('Ait', fruit)">
+                                        {{fruit.name}}
+                                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                   </mat-chip>
+                              </mat-chip-list>
+                         </div>
                     </div>
 
                     <div class="full-width">
                          <label for="">Enter Cls</label>
-                         <select>
-                              <option value="">Select</option>
-                              <option value="Car">Car</option>
-                              <option value="Bike">Bike</option>
-                              <option value="Bus">Bus</option>
-                         </select>
-                         <textarea class='displayselected setmargin'></textarea>
+                         <mat-form-field appearance="outline">
+                              <mat-select placeholder="Select" (selectionChange)="onChange('Cls', $event)">
+                                   <mat-option value="">Select</mat-option>
+                                   <mat-option *ngFor='let da of Cls' [value]='da.id' (click)="getInnerText('Cls', da)">
+                                        {{da.name}}
+                                   </mat-option>
+                              </mat-select>
+                         </mat-form-field>
+                         <div class="textarea">
+                              <mat-chip-list #chipList aria-label="Fruit selection" formControlName="Cls">
+                                   <mat-chip *ngFor="let fruit of ClsFruits" [selectable]="selectable"
+                                        [removable]="removable" (removed)="remove('Cls', fruit)">
+                                        {{fruit.name}}
+                                        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                                   </mat-chip>
+
+                              </mat-chip-list>
+                         </div>
                     </div>
 
 
                     <div class="full-width">
                          <label for="">Notes</label>
-                         <textarea class='notes' rows="10"></textarea>
+                         <textarea class='notes' rows="10" formControlName="Notes"></textarea>
                     </div>
 
                     <div class="full-width">
                          <label for="">Enter Categories</label>
-                         <select>
-                              <option value="">Select</option>
-                              <option value="Car">Car</option>
-                              <option value="Bike">Bike</option>
-                              <option value="Bus">Bus</option>
-                         </select>
+                         <mat-form-field appearance="outline">
+                              <mat-select placeholder="Select" formControlName="Catgories">
+                                   <mat-option value="">Select</mat-option>
+                                   <mat-option value="Car">Car</mat-option>
+                                   <mat-option value="Bike">Bike</mat-option>
+                                   <mat-option value="Bus">Bus</mat-option>
+                              </mat-select>
+                         </mat-form-field>
                     </div>
-                    <!-- <div class="full-width">
-                         <button>Send</button>
-                    </div> -->
-               </form>
-          </div>
 
-          <div class="contacts">
-               <label for="">Enter Look Back Date / Range</label>
-               <select>
-                    <option value="">Select</option>
-                    <option value="Car">Car</option>
-                    <option value="Bike">Bike</option>
-                    <option value="Bus">Bus</option>
-               </select>
-               <br><br>
-               <mat-calendar (selectedChange)="onSelectDate($event)"></mat-calendar>
-               <input type="text" style="margin-top: 2px;" [value]="selectedDate">
+               </div>
+
+               <div class="contacts">
+
+
+                    <label for="">Enter Look Back Date / Range</label>
+                    <mat-form-field appearance="outline">
+                         <mat-select placeholder="Select" formControlName="DateRang">
+                              <mat-option value="">Select</mat-option>
+                              <mat-option value="Car">Car</mat-option>
+                              <mat-option value="Bike">Bike</mat-option>
+                              <mat-option value="Bus">Bus</mat-option>
+                         </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="date-form-field" color="primary">
+                         <mat-date-range-input [rangePicker]="rangePicker" formGroupName="SelRange">
+                              <input matStartDate placeholder="Start date" formControlName="start" readonly>
+                              <input matEndDate placeholder="End date" formControlName="end" readonly>
+                         </mat-date-range-input>
+                         <mat-datepicker-toggle matSuffix [for]="rangePicker"></mat-datepicker-toggle>
+                         <mat-date-range-picker (opened)="streamOpened($event)" class="endDate" #rangePicker
+                              [calendarHeaderComponent]="custumHeader">
+                         </mat-date-range-picker>
+                    </mat-form-field>
+               </div>
           </div>
-     </div>
-     <div class="actions">
-          <span>
-               <button>Search</button>
-          </span>
-          <span>
-               <button>Reset</button>
-          </span>
-     </div>
+          <div class="actions">
+               <span>
+                    <button type="submit">Search</button>
+               </span>
+               <span>
+                    <button type="reset">Reset</button>
+               </span>
+          </div>
+     </form>
 </div>

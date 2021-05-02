@@ -1,0 +1,14 @@
+<div class="example-header">
+     <button mat-icon-button (click)="previousClicked('month')">
+          <mat-icon>keyboard_arrow_left</mat-icon>
+     </button>
+     <span class="example-header-label">
+          <button class="period"> {{ periodLabel[1]}}</button>
+          &nbsp;&ensp; &nbsp;&ensp;
+          <button class="period"> {{ periodLabel[0]}} </button>
+     </span>
+     <button mat-icon-button (click)="nextClicked('month')">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+     </button>
+
+</div>
