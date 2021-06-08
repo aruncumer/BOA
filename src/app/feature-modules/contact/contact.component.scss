@@ -1,0 +1,60 @@
+.sidebar {
+	grid-area: sidebar;
+	min-width: 100px;
+	background-color: #fff;
+}
+
+.selected {
+	padding-left: 8px;
+	border-bottom: 1px solid black;
+	padding-top: 10px;
+}
+
+.content {
+	grid-area: content;
+}
+
+.header {
+	grid-area: header;
+	* {
+		color: #4267b2;
+		font-size: 13pt;
+		font-weight: 500;
+	}
+}
+
+.thumbs {
+	padding: 12px;
+	font-size: 20px !important;
+	position: absolute;
+	top: 4px;
+}
+.contact-wrapper {
+	display: grid;
+	grid-gap: 40px;
+	grid-template-areas:
+		"header"
+		"sidebar"
+		"content";
+}
+
+@media (min-width: 30rem) {
+	.contact-wrapper {
+		margin-top: 5px;
+		grid-template-columns: 23em 120px;
+		grid-template-areas:
+			"header  ...... ....... "
+			"sidebar content content";
+	}
+}
+
+::ng-deep {
+	.mat-card {
+		border-radius: 0px !important;
+		padding-left: 8px !important;
+	}
+
+	.mat-list-item-content {
+		padding: 5px 10px !important;
+	}
+}

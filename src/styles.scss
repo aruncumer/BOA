@@ -38,6 +38,7 @@ $my-app-theme: mat-light-theme(
 @import "~bootstrap/dist/css/bootstrap.css";
 @import "~font-awesome/css/font-awesome.css";
 @import "~@angular/material/theming";
+@import "~font-awesome/scss/font-awesome.scss";
 
 * {
 	-webkit-box-shadow: none;
