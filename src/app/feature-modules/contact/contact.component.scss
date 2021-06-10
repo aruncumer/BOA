@@ -38,10 +38,16 @@
 		"content";
 }
 
+.micon {
+	color: blue;
+	cursor: pointer;
+}
+
 @media (min-width: 30rem) {
 	.contact-wrapper {
 		margin-top: 5px;
 		grid-template-columns: 23em 120px;
+		grid-template-rows: auto;
 		grid-template-areas:
 			"header  ...... ....... "
 			"sidebar content content";

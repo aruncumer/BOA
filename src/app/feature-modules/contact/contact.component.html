@@ -17,13 +17,14 @@
 		<div class="selected">
 			<p style="font-size: 13pt;">Selected</p>
 		</div>
-		<div>
+		<div *ngIf="toggleFlag; else editBlock">
 			<mat-list>
 				<mat-list-item>
 					<span>
 						Application : ['68']
 						&nbsp;
-						<mat-icon [inline]="true" style="color: blue;">edit</mat-icon>
+						<mat-icon [inline]="true" class="micon" (click)="showlabel()">edit
+						</mat-icon>
 					</span>
 				</mat-list-item>
 				<mat-list-item> Cls impacted : No input </mat-list-item>
@@ -31,7 +32,41 @@
 				<mat-list-item> Search Tags: ['Data'] </mat-list-item>
 				<mat-list-item> Incident Date: 02.02.2021 </mat-list-item>
 			</mat-list>
+			<br>
 		</div>
+		<!-- Show on click edit -->
+		<ng-template #editBlock>
+			<div>
+				<mat-list>
+					<mat-list-item>
+						<mat-form-field class="example-chip-list">
+							<mat-label>Favorite Fruits</mat-label>
+							<mat-chip-list #chipList aria-label="Fruit selection">
+								<mat-chip *ngFor="let fruit of fruits" [selectable]="selectable"
+									[removable]="removable" (removed)="remove(fruit)">
+									{{fruit}}
+									<mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+								</mat-chip>
+								<input placeholder="New fruit..." #fruitInput [formControl]="fruitCtrl"
+									[matAutocomplete]="auto" [matChipInputFor]="chipList"
+									[matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+									(matChipInputTokenEnd)="add($event)">
+							</mat-chip-list>
+							<mat-autocomplete #auto="matAutocomplete" (optionSelected)="selected($event)">
+								<mat-option *ngFor="let fruit of filteredFruits | async" [value]="fruit">
+									{{fruit}}
+								</mat-option>
+							</mat-autocomplete>
+						</mat-form-field>
+					</mat-list-item>
+
+					<mat-list-item>
+						<mat-icon [inline]="true" (click)="showlabel()" class="micon">edit</mat-icon>
+					</mat-list-item>
+				</mat-list>
+			</div>
+		</ng-template>
+		<br>
 	</div>
 	<div class="content">
 		<mat-card>Simple card3</mat-card>
