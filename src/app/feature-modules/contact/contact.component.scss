@@ -1,7 +1,18 @@
 .sidebar {
 	grid-area: sidebar;
 	min-width: 100px;
-	background-color: #fff;
+	// background-color: #fff;
+}
+
+.example-flex-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 0.5em;
+	font-size: 24px;
+	> button {
+		width: 40%;
+	}
 }
 
 .selected {
@@ -62,5 +73,9 @@
 
 	.mat-list-item-content {
 		padding: 5px 10px !important;
+	}
+
+	.mat-flat-button {
+		border-radius: 0px !important;
 	}
 }
