@@ -75,6 +75,47 @@
 		</div>
 	</div>
 	<div class="content">
-		<mat-card>Simple card3</mat-card>
+		<mat-card class="hint-card">
+			<div class="wrapper">
+				<div class="box d">
+					<span class="info" style="padding-top: 25px;">
+						<mat-icon inline=true style="font-size: 50px;color: blue;">navigate_before
+						</mat-icon>
+					</span>
+
+					<span class="info" style="position: absolute;top: 10px;">
+						<mat-icon style="color: red;font-size: 26px;" inline=true>info
+						</mat-icon>
+					</span>
+					&nbsp;
+					&nbsp;
+					<span class="info" style="position: absolute;">
+						<ol start="5">
+							<li>
+								<p>
+									<b>ClAIMS CORE SERVICES LAYER</b> has expired certificates: <br>
+									<b>CCSLBANKOFAMERICA.COM</b> expired on <b>2020-03-15</b>
+								</p>
+							</li>
+							<li>
+								<p>
+									<b>EQSONDEMAND</b> has expired certificates: <br>
+									<b>PRESIDIO.EMEA.BANKOFAMERICA.COM</b> expired on <b>2019-11-14</b>
+								</p>
+							</li>
+						</ol>
+					</span>
+				</div>
+
+				<div class="box f">
+					<span>
+						<label for="Export ">Export as:</label>
+						<button mat-flat-button class="exp">CSV</button>
+						&nbsp;
+						<button mat-flat-button class="exp">Excel</button>
+					</span>
+				</div>
+			</div>
+		</mat-card>
 	</div>
 </div>

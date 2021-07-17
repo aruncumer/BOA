@@ -79,3 +79,41 @@
 		border-radius: 0px !important;
 	}
 }
+
+// Hints
+.hint-card {
+	background-color: #f5f8ff !important ;
+}
+.wrapper {
+	display: grid;
+	column-gap: 4px;
+	grid-template-columns: repeat(4, [col] 150px);
+	// grid-template-rows: repeat(3, [row] auto);
+	color: #444;
+	background-color: #f5f8ff !important ;
+}
+
+.box {
+	color: black;
+}
+
+.d {
+	grid-column: col / span 6;
+	grid-row: auto;
+	align-self: stretch;
+}
+
+.f {
+	grid-column: col 6 / span 6;
+	grid-row: auto;
+}
+
+.info {
+	display: inline-block;
+}
+
+.exp {
+	background-color: #ededed;
+	width: 84px;
+	height: 48px;
+}
